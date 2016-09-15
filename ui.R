@@ -1,5 +1,6 @@
 library(shiny)
 library(lubridate)
+library(RCurl)
 
 db_url <- getURL(filepath)
 db_init_table <- read.csv(text = db_url)
