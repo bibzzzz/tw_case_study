@@ -2,6 +2,8 @@ library(shiny)
 library(lubridate)
 library(RCurl)
 
+filepath <- 'https://raw.githubusercontent.com/bibzzzz/tw_case_study/master/referral_weekly_data.csv'
+
 db_url <- getURL(filepath)
 db_init_table <- read.csv(text = db_url)
 db_init_table[db_init_table=='\\0'] <- NA
